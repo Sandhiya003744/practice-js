@@ -6,4 +6,5 @@ router.get('/user/:name', (req,res) => {
 res.json(`Hello [${name}]!`);
 
 });
+
 module.exports = router;
