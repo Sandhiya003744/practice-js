@@ -1,7 +1,9 @@
 const express = require("express");
-const route = express()
-port=3000
-route.get('/user/:name', (req,res) => {
-res.json("Hello, [name]!")
+const router = express.Router();
+
+router.get('/user/:name', (req,res) => {
+    const name = req.params.name;
+res.json(`Hello [${name}]!`);
+
 });
-route.listen(port, console.log(`http://localhost:${port}/user/:name`))
+module.exports = router;
