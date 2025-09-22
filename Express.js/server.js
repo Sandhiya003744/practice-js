@@ -21,5 +21,9 @@ server.post('/list', (req, res) => {
 const router = require("./route.js");
 server.use('/' ,router);
 
+server.use((req, res) => 
+  res.status(404).json({error: `Route ${req.method} does not found`}))
+
 server.listen(port, () => {
-  console.log(`Server running at http://localhost:${3000}`)})
+  console.log(`Server running at http://localhost:${port}`)
+})
