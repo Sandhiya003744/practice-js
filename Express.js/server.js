@@ -22,7 +22,7 @@ const router = require("./route.js");
 server.use('/' ,router);
 
 server.use((req, res) => 
-  res.status(404).json({error: `Route ${req.method} does not found`}))
+  res.status(404).json({error: `Route ${req.method}  ${req.url} does not found`}))
 
 server.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`)
