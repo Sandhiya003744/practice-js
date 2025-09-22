@@ -2,6 +2,6 @@ const express = require("express");
 const server = express()
 port=3000
 server.get('/', (req,res) => {
-res.json("Hello world")
+res.json("Hello World")
 });
-server.listen(port, console.log("Server running at http://localhost:3000"))
+server.listen(port, console.log(`Server running at http://localhost:${3000}`))
